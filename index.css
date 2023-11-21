@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: "Lato", Arial, sans-serif !important;
+  background: linear-gradient(to right, #E34169, #343E3D);
+  padding-top: 70px !important;
+  
+  
+}
+
+h1{
+  padding-bottom: none !important;
+  height: auto;
+}
+
+nav {
+  background-color: #000000;
+  padding: 0 20px 0 20PX;
+  text-align: center !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px 0 rgba(73, 73, 73, 0.5);
+  height: 70px;
+}
+
+.navbar {
+display: flex;
+align-content: center;}
+
+.navbar-brand {
+  margin-right: auto;
+  padding: 0 !important;
+  margin: 0;
+}
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+  animation: oscillate 2s infinite;
+}
+
+@keyframes oscillate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#tarjetas {
+  height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+
+}
+
+
+.card {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+.card img {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card-title {
+  font-family: "Lato", Arial, sans-serif !important;
+  color: rgb(0, 0, 0) !important;
+  font-size: 2rem;
+}
+.card-text {
+  color: white;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocha</title>
+    <link rel="icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="video.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <header class="bg-dark text-white">
+        <div class=" mx-auto"> <!-- Add mx-auto class to center the content -->
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <h1><a class="navbar-brand" href="#"><img src="img/logo_trocha.png" alt="Logo" class="logo-img"></a></h1>
+          </nav>
+        </div>
+      </header>
+      <main id="video-content">
+        <section id="video">
+            <div class="container">
+                <div class="row" style="justify-content: center;">
+                    <div class="">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CIwisCn2kFU?si=k0pnSWFKz46vtUFc?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <div class="col-lg-4" >
+                        <button id="btn-video" class="btn btn-primary btn-block">
+                            <a id="btn-link" href="https://youtu.be/CIwisCn2kFU">Proximo paso</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        setTimeout(function () {
+            var btn = document.getElementById('btn-video');
+            btn.style.opacity = 1;
+                }, 60000);
+    </script>
+</body>
+
+</html>
