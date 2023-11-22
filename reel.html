@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div id="popup-image" style="display: none;">
+            <div id="popup-image" onclick="closePopup()">
                 <img src="img/Pop_Up.png" alt="Popup Image">
             </div>
         </section>
@@ -55,6 +55,10 @@
         document.getElementById('btn-video').addEventListener('click', function() {
         document.getElementById('popup-image').style.display = 'block';
         });
+
+        function closePopup() {
+        document.getElementById('popup-image').style.display = 'none';
+    }
     </script>
 </body>
 

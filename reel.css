@@ -4,10 +4,8 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "Lato", Arial, sans-serif !important;
-
     background-color: #82A79E !important;
     margin: 0;
     padding-top: 70px !important;
@@ -31,8 +29,6 @@ nav {
     left: 0;
     width: 100%;
     z-index: 999;
-    /*     box-shadow: 0 2px 4px 0 rgba(73, 73, 73, 0.5);
- */
     height: 70px;
 }
 
@@ -62,39 +58,27 @@ nav {
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.1);
     }
-
     100% {
         transform: scale(1);
     }
 }
 
 #video {
-    height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
+    height: calc(100vh - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: auto;
-  
-  }
-
-/* #video-content {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-} */
+}
 
 #video-container {
     width: 70vw;
     height: 70vh;
-    margin:  auto;
+    margin: auto;
 }
-
 
 #btn-video {
     text-decoration: none;
@@ -109,7 +93,6 @@ nav {
 }
 
 #btn-video a {
-
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -123,6 +106,9 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #popup-image img {
@@ -130,13 +116,24 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 70%;
+    max-height: 70%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2rem;
 }
 
-/* @media (max-width: 767px) {
-    #video-container {
-        width: 80vw;
-        height: 80%;
+@keyframes oscillate {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
     }
-} */
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+#popup-image img:hover {
+    animation: oscillate 3s infinite;
+}
