@@ -35,18 +35,26 @@
                 <div class="row" style="justify-content: center;">
                     <div class="col-lg-4" >
                         <button id="btn-video" class="btn btn-primary btn-block">
-                            <a id="btn-link" href="https://youtu.be/CIwisCn2kFU">Terminé el video</a>
+                            <a id="btn-link">Terminé el video</a>
                         </button>
                     </div>
                 </div>
             </div>
+            <div id="popup-image" style="display: none;">
+                <img src="img/Pop_Up.png" alt="Popup Image">
+            </div>
         </section>
+
     </main>
     <script>
         setTimeout(function () {
             var btn = document.getElementById('btn-video');
             btn.style.opacity = 1;
-                }, 1);
+                }, 1000);
+        
+        document.getElementById('btn-video').addEventListener('click', function() {
+        document.getElementById('popup-image').style.display = 'block';
+        });
     </script>
 </body>
 
