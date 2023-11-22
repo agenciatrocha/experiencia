@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Lato", Arial, sans-serif !important;
+
+    background-color: #82A79E !important;
+    margin: 0;
+    padding-top: 70px !important;
+    overflow: hidden;
+    background-image: url('img/Patron_Fondo_Trocha_negro.png');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    padding-bottom: none !important;
+    height: auto;
+}
+
+nav {
+    background-color: #000000;
+    padding: 0 20px;
+    text-align: center !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    /*     box-shadow: 0 2px 4px 0 rgba(73, 73, 73, 0.5);
+ */
+    height: 70px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin-right: auto;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-img:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#video {
+    height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+  
+  }
+
+/* #video-content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */
+
+#video-container {
+    width: 70vw;
+    height: 70vh;
+    margin:  auto;
+}
+
+
+#btn-video {
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #000000;
+    margin-top: 30px;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#btn-video a {
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* @media (max-width: 767px) {
+    #video-container {
+        width: 80vw;
+        height: 80%;
+    }
+} */
