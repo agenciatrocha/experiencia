@@ -12,7 +12,21 @@ body {
     margin: 0;
     padding-top: 70px !important;
     overflow: hidden;
-    background-image: url('img/Patron_Fondo_Trocha.png');
+/*     background-image: url('img/Patron_Fondo_Trocha.png');
+ */    background-size: cover;
+    background-position: center;
+}
+
+body::after {
+    content: '';
+    background: url('img/Patron_Fondo_Trocha.png');
+    opacity: 0.5; /* Adjust the opacity of the overlay */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
     background-size: cover;
     background-position: center;
 }
@@ -72,36 +86,48 @@ nav {
     }
 }
 
+
+
 #video {
-    height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
+    height: calc(100vh - 70px);
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items at the start (top) of the container */
     justify-content: center;
-    overflow: auto;
-  
-  }
+    overflow: hidden;
+    position: relative; /* Added position relative to control child elements */
+    padding-top: 2rem;
+}
 
-/* #video-content {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-} */
+.embed-responsive {
+    width: 80%; /* Adjust this width as needed */
+    max-width: 800px; /* Set a maximum width for responsiveness */
+    position: absolute;
+    top: 50%; /* Position the iframe 50% from the top */
+    left: 50%; /* Position the iframe 50% from the left */
+    transform: translate(-50%, -50%); /* Center the iframe */
+}
 
-#video-container {
+/* Ensure iframe is responsive */
+.embed-responsive::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* #video-container {
     width: 70vw;
     height: 70vh;
     margin:  auto;
 }
-
+ */
 
 #btn-video {
+    font-weight: 700;
     text-decoration: none;
     border-radius: 10px;
     background-color: #82A79E;
     margin-top: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10px 20px;
     cursor: pointer;
     opacity: 0;

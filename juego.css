@@ -8,7 +8,7 @@
 
 body {
   font-family: "Lato", Arial, sans-serif !important;
-  background: linear-gradient(to right, #E34169, #343E3D);
+  background: linear-gradient(to right, #343E3D, #82a79e);
   padding-top: 70px !important;
   
   
@@ -74,24 +74,14 @@ h2 {
 
 .texto {
   font-size: 1.5rem;
-  text-align: center !important;
+  text-align: center;
   color: #000000;
-
 
 }
 
 
 
 #portada {
-  height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: auto;
-
-}
-
-#tarjetas {
   height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
   display: flex;
   align-items: center;
@@ -134,6 +124,15 @@ h2 {
 }
 
 
+#tarjetas {
+  height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+
+}
+
 
 .card {
   background-color: transparent !important;
@@ -162,28 +161,3 @@ h2 {
   font-size: 1.5rem;
 }
 
-.swal2-container {
-  width: 100%;
-}
-
-.swal2-popup {
-  background-color: black !important;
-  color: white !important;
-  text-align: center !important;
-  width: 100%;
-}
-
-
-
-
-.swal2-html-container{
-  color: white !important;
-  text-align: center !important;
-  font-size: 1.5rem !important;
-}
-
-.swal2-timer-progress-bar {
-  width: 100%;
-  height: 0.25em;
-  background: rgb(255 255 255) !important;
-}
