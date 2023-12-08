@@ -32,23 +32,49 @@
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CIwisCn2kFU?si=k0pnSWFKz46vtUFc?autoplay=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
-                </div>
-                <div class="row" style="justify-content: center;">
+          <!--         </div>
+              <div class="row" style="justify-content: center;">
                     <div class="col-md-4" >
                         <button id="btn-video" class="btn btn-primary btn-block">
-                            <a id="btn-link" href="juego.html">Proximo paso</a>
+                            <a id="btn-link" href="juego.html">Próximo paso</a>
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
+
     <script>
+setTimeout(function () {
+    // Create the button element
+    var btn = document.createElement('button');
+    btn.id = 'btn-video';
+    btn.className = 'btn btn-primary btn-block col-md-4';
+    var link = document.createElement('a');
+    link.href = 'juego.html';
+    link.innerText = 'Próximo paso';
+    btn.appendChild(link);
+
+    // Find the parent element where you want to append the button
+    var container = document.querySelector('#video .container .row:last-child');
+    container.appendChild(btn);
+
+    // Adding a delay to the transition by toggling a class after a brief timeout
+    setTimeout(function () {
+        btn.classList.add('show-button');
+    }, 100); // Adding a slight delay for transition effect
+}, 60000); // Creating the button after 6 seconds (6000 milliseconds)
+
+    </script>
+
+<!--     <script>
         setTimeout(function () {
             var btn = document.getElementById('btn-video');
             btn.style.opacity = 1;
                 }, 60000);
-    </script>
+    </script> -->
+
+
 </body>
 
 </html>

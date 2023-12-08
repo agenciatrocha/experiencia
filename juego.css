@@ -133,6 +133,13 @@ h2 {
 
 }
 
+iframe {
+  width: 100%;
+  height: 80vh; /* Setting iframe height to 80% of viewport height */
+  background: transparent !important; /* Set the background to transparent */
+  border: none; /* Remove the border */
+}
+
 
 .card {
   background-color: transparent !important;

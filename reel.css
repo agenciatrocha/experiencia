@@ -69,9 +69,10 @@ nav {
 #video {
     height: calc(100vh - 70px);
     display: flex;
-    align-items: center;
+    align-items: center; /* Align items at the start (top) of the container */
     justify-content: center;
-    overflow: auto;
+    overflow: hidden;
+    position: relative; /* Added position relative to control child elements */
 }
 
 #video-container {
@@ -81,20 +82,28 @@ nav {
 }
 
 #btn-video {
+    font-weight: 700;
     text-decoration: none;
     border-radius: 10px;
     background-color: #000000;
     margin-top: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10px 20px;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 1s ease;
+/* Initial opacity */
+opacity: 0;
+/* Transition properties */
+transition: opacity 1s ease;
 }
+
 
 #btn-video a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+#btn-video.show-button {
+    opacity: 1;
 }
 
 #popup-image {
