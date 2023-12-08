@@ -12,9 +12,36 @@ body {
     overflow: hidden;
     background-image: url('img/Patron_Fondo_Trocha_negro.png');
     background-size: cover;
+    background-attachment: fixed; /* Fix the background image */
     background-position: center;
 }
 
+/* body::after {
+    content: '';
+    background-image: url('img/Patron_Fondo_Trocha_negro.png');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+ */
+/* 
+body {
+    font-family: "Lato", Arial, sans-serif !important;
+    background-color: #82A79E !important;
+    margin: 0;
+    padding-top: 70px !important;
+/*     overflow: hidden;
+    background-image: url('img/Patron_Fondo_Trocha_negro.png');
+    background-size: cover;
+    background-position: center;
+}
+ */
 h1 {
     padding-bottom: none !important;
     height: auto;
@@ -66,6 +93,74 @@ nav {
     }
 }
 
+
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000000 !important;
+    font-weight: 700 !important;
+  
+  }
+
+  .caja_texto {
+    background-color: #82A79E !important;
+    border-radius: 20px;
+    padding: 2rem;
+
+  }
+  
+  .texto {
+    font-size: 1.5rem;
+    text-align: center !important;
+    color: #000000;
+  
+  
+  }
+  
+  .animated-button {
+    font-weight: 700 !important;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; /* Separate from the rest of the section */
+    border: none !important;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #000000 !important;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    animation: expandContract 2s infinite; /* Add animation */
+  }
+  
+  .animated-button:hover {
+    transform: scale(1.1);
+    border: none;
+  }
+  
+  .animated-button:active {
+    outline: none !important;
+  }
+  
+  @keyframes expandContract {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  
+  #portada {
+    height: calc(100vh - 70px); /* Restar la altura del encabezado (70px) al 100% del alto de la ventana (100vh) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+  
+  }
+
 #video {
     height: calc(100vh - 70px);
     display: flex;
@@ -101,6 +196,7 @@ transition: opacity 1s ease;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
 
 #btn-video.show-button {
     opacity: 1;

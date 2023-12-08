@@ -24,6 +24,15 @@
         </div>
     </header>
     <main id="video-content">
+        <section id="portada">
+            <div class="container caja_texto">
+              <h2 class="titulo">¡LLEGASTE!</h2>
+              <p class="texto">Gracias por caminar con nosotros, por tomar el camino corto, ahora les vamos a compartir algo más.</br>En tan sólo un minuto vamos a mostrarles nuestros trabajos estelares.</br>Ideas que vinieron de poner la creatividad, al servicio de lograr lo mejor de la manera más fácil</p>
+              <div class="text-center"> <!-- Center the button -->
+                <button class="btn btn-primary animated-button" onclick="scrollToSection('video')">VER REEL</button>
+              </div>
+            </div>
+          </section>
         <section id="video">
             <div class="container">
                 <div class="row" style="justify-content: center;">
@@ -83,10 +92,19 @@
 
         // Event listener for closing the popup
         document.getElementById('popup-image').addEventListener('click', closePopup);
-    }, 60000); // Creating the button after 6 seconds (6000 milliseconds)
+    }, 6000); // Creating the button after 6 seconds (6000 milliseconds)
 });
 
     </script>
+
+<script>
+    function scrollToSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
     <!--   <script>
         setTimeout(function () {
             var btn = document.getElementById('btn-video');
