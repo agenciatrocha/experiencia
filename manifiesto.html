@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trocha</title>
     <link rel="icon" href="img/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="manifiesto.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -29,7 +29,7 @@
                 <div class="row" style="justify-content: center;">
                     <div class="">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CIwisCn2kFU?si=k0pnSWFKz46vtUFc?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VF5hNZtP8aM?si=xvN23WyQ6IlHddMu?autoplay=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
           <!--         </div>
@@ -41,31 +41,50 @@
                     </div>
                 </div>
             </div> -->
+        
+        
         </section>
     </main>
 
+    
     <script>
-setTimeout(function () {
-    // Create the button element
-    var btn = document.createElement('button');
-    btn.id = 'btn-video';
-    btn.className = 'btn btn-primary btn-block col-md-4';
-    var link = document.createElement('a');
-    link.href = 'juego.html';
-    link.innerText = 'Próximo paso';
-    btn.appendChild(link);
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                // Create the button element
+                var btn = document.createElement('button');
+                btn.id = 'btn-video';
+                btn.className = 'btn btn-primary btn-block col-md-4';
+                var link = document.createElement('a');
+                link.href = 'final.html'; 
+                link.innerText = 'Fin';
+                btn.appendChild(link);
 
-    // Find the parent element where you want to append the button
-    var container = document.querySelector('#video .container .row:last-child');
-    container.appendChild(btn);
+                // Find the parent element where you want to append the button
+                var container = document.querySelector('#video .container .row:last-child');
+                container.appendChild(btn);
 
-    // Adding a delay to the transition by toggling a class after a brief timeout
-    setTimeout(function () {
-        btn.classList.add('show-button');
-    }, 100); // Adding a slight delay for transition effect
-}, 60000); // Creating the button after 6 seconds (6000 milliseconds)
+                // Adding a delay to the transition by toggling a class after a brief timeout
+                setTimeout(function () {
+                    btn.classList.add('show-button');
+                }, 100); // Adding a slight delay for transition effect
+
+                // Add event listener to the button after it's created
+                btn.addEventListener('click', function () {
+                    document.getElementById('popup-image').style.display = 'block';
+                });
+
+                // Function to close the popup
+                function closePopup() {
+                    document.getElementById('popup-image').style.display = 'none';
+                }
+
+                // Event listener for closing the popup
+                document.getElementById('popup-image').addEventListener('click', closePopup);
+            }, 40000); // Creating the button after 6 seconds (6000 milliseconds)
+        });
 
     </script>
+
 
 <!--     <script>
         setTimeout(function () {

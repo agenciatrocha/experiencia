@@ -26,23 +26,26 @@
     <main id="video-content">
         <section id="portada">
             <div class="container caja_texto">
-              <h2 class="titulo">¡LLEGASTE!</h2>
-              <p class="texto">Gracias por caminar con nosotros, por tomar el camino corto, ahora les vamos a compartir algo más.</br>En tan sólo un minuto vamos a mostrarles nuestros trabajos estelares.</br>Ideas que vinieron de poner la creatividad, al servicio de lograr lo mejor de la manera más fácil</p>
-              <div class="text-center"> <!-- Center the button -->
-                <button class="btn btn-primary animated-button" onclick="scrollToSection('video')">VER REEL</button>
-              </div>
+                <h2 class="titulo">¡LLEGASTE!</h2>
+                <p class="texto">Gracias por caminar con nosotros, por tomar el camino corto, ahora les vamos a
+                    compartir algo más.</br>En tan sólo un minuto vamos a mostrarles nuestros trabajos
+                    estelares.</br>Ideas que vinieron de poner la creatividad, al servicio de lograr lo mejor de la
+                    manera más fácil</p>
+                <div class="text-center"> <!-- Center the button -->
+                    <button class="btn btn-primary animated-button" onclick="scrollToSection('video')">VER REEL</button>
+                </div>
             </div>
-          </section>
+        </section>
         <section id="video">
             <div class="container">
                 <div class="row" style="justify-content: center;">
                     <div class="">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item"
-                            src="https://www.youtube.com/embed/zvuBWSCPBVE?si=AGUjSCyomhU26zhd/preview?autoplay=1"
+                                src="https://www.youtube.com/embed/zvuBWSCPBVE?si=AGUjSCyomhU26zhd/preview?autoplay=1"
                                 frameborder="0" allowfullscreen></iframe>
-<!--                                 <iframe src="https://drive.google.com/file/d/1Y5-syYgZEvEteWWoA1J_W36mepxN0Z8c/preview" width="640" height="480" allow="autoplay"></iframe>
- -->                                
+                            <!--                                 <iframe src="https://drive.google.com/file/d/1Y5-syYgZEvEteWWoA1J_W36mepxN0Z8c/preview" width="640" height="480" allow="autoplay"></iframe>
+ -->
                         </div>
                     </div>
                 </div>
@@ -62,51 +65,51 @@
     </main>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function () {
-        // Create the button element
-        var btn = document.createElement('button');
-        btn.id = 'btn-video';
-        btn.className = 'btn btn-primary btn-block col-md-4';
-        var link = document.createElement('a');
-        /* link.href = '#'; */ // Set href to '#' for demo purposes
-        link.innerText = 'Terminé el video';
-        btn.appendChild(link);
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                // Create the button element
+                var btn = document.createElement('button');
+                btn.id = 'btn-video';
+                btn.className = 'btn btn-primary btn-block col-md-4';
+                var link = document.createElement('a');
+                /* link.href = '#'; */ // Set href to '#' for demo purposes
+                link.innerText = 'Terminé el video';
+                btn.appendChild(link);
 
-        // Find the parent element where you want to append the button
-        var container = document.querySelector('#video .container .row:last-child');
-        container.appendChild(btn);
+                // Find the parent element where you want to append the button
+                var container = document.querySelector('#video .container .row:last-child');
+                container.appendChild(btn);
 
-        // Adding a delay to the transition by toggling a class after a brief timeout
-        setTimeout(function () {
-            btn.classList.add('show-button');
-        }, 100); // Adding a slight delay for transition effect
+                // Adding a delay to the transition by toggling a class after a brief timeout
+                setTimeout(function () {
+                    btn.classList.add('show-button');
+                }, 100); // Adding a slight delay for transition effect
 
-        // Add event listener to the button after it's created
-        btn.addEventListener('click', function () {
-            document.getElementById('popup-image').style.display = 'block';
+                // Add event listener to the button after it's created
+                btn.addEventListener('click', function () {
+                    document.getElementById('popup-image').style.display = 'block';
+                });
+
+                // Function to close the popup
+                function closePopup() {
+                    document.getElementById('popup-image').style.display = 'none';
+                }
+
+                // Event listener for closing the popup
+                document.getElementById('popup-image').addEventListener('click', closePopup);
+            }, 60000); // Creating the button after 6 seconds (6000 milliseconds)
         });
-
-        // Function to close the popup
-        function closePopup() {
-            document.getElementById('popup-image').style.display = 'none';
-        }
-
-        // Event listener for closing the popup
-        document.getElementById('popup-image').addEventListener('click', closePopup);
-    }, 6000); // Creating the button after 6 seconds (6000 milliseconds)
-});
 
     </script>
 
-<script>
-    function scrollToSection(sectionId) {
-      var section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  </script>
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
     <!--   <script>
         setTimeout(function () {
             var btn = document.getElementById('btn-video');
